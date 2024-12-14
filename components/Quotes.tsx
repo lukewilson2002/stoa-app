@@ -19,8 +19,8 @@ export default function Quotes({ quotes }: { quotes: IQuote[] }) {
 
   return (
     <>
-      <search className="flex justify-end">
-        <input className="px-2 py-0.5 border" type="text" placeholder="Search quotes" onChange={(e) => setSearch(e.target.value)} />
+      <search className="flex justify-center">
+        <input className="px-2 py-0.5 border w-1/2 min-w-28" type="text" placeholder="Search quotes" onChange={(e) => setSearch(e.target.value)} />
       </search>
       {quotes.filter((quote) => searchFilter(searchKeywords, quote)).map((quote, index) => {
         const href = `/quotes/${index}`;
