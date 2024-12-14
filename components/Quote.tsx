@@ -5,7 +5,7 @@ interface IQuoteProps {
   className?: string;
 }
 
-const Quote = ({ quote, className }: IQuoteProps) => {
+export default function Quote({ quote, className }: IQuoteProps) {
   if (!quote) return null;
   return (
     <blockquote className={className}>
@@ -19,5 +19,3 @@ const Quote = ({ quote, className }: IQuoteProps) => {
     </blockquote>
   );
 }
-
-export default Quote;

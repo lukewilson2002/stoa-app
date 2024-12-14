@@ -9,7 +9,7 @@ interface NavLinksProps {
   max: number;
 }
 
-const NavLinks = ({ id, max }: NavLinksProps) => {
+export default function NavLinks({ id, max }: NavLinksProps) {
   const router = useRouter();
 
   useEffect(() => {
@@ -51,5 +51,3 @@ const NavLinks = ({ id, max }: NavLinksProps) => {
     </nav>
   );
 }
-
-export default NavLinks;
