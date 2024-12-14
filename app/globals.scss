@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Prevent browsers from applying blue outline on focus
+input:focus {
+  @apply outline-none;
+}
+
+// :root {
+//   --background: #ffffff;
+//   --foreground: #171717;
+//   --secondary: #ccc;
+// }
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+} */
