@@ -10,7 +10,7 @@ export async function generateStaticParams(): Promise<{ id: string; }[]> {
   }));
 }
 
-export default async function Page({ params }: { params: { id: string; } }) {
+export default async function Page({ params }: { params: Promise<{ id: string; }> }) {
   const { id } = await params;
   const index = parseInt(id, 10);
   const quote = quotes[parseInt(id, 10)];
