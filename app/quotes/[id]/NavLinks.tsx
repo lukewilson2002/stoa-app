@@ -36,7 +36,7 @@ const NavLinks = ({ id, max }: NavLinksProps) => {
     <nav>
       <ul className="flex justify-between">
         <li>
-          <Link className={hasPrev ? "" : "text-gray-300"} href={prev} aria-disabled={!hasPrev}>&lt; prev</Link>
+          <Link className={hasPrev ? "" : "text-gray-300"} href={hasPrev ? prev : "#"} aria-disabled={!hasPrev}>&lt; prev</Link>
         </li>
         <li>
           <div>
@@ -45,7 +45,7 @@ const NavLinks = ({ id, max }: NavLinksProps) => {
           </div>
         </li>
         <li>
-          <Link className={hasNext ? "" : "text-gray-300"} href={next} aria-disabled={!hasNext}>next &gt;</Link>
+          <Link className={hasNext ? "" : "text-gray-300"} href={hasNext ? next : "#"} aria-disabled={!hasNext}>next &gt;</Link>
         </li>
       </ul>
     </nav>
