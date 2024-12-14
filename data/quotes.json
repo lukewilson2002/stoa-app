@@ -9,7 +9,11 @@
 	},
 	{
 	  "text": "Wealth consists not in having great possessions, but in having few wants.",
-	  "author": "Epictetus"
+	  "author": "Epictetus",
+		"source": {
+			"name": "The Art of Living",
+			"url": "https://en.wikipedia.org/wiki/Enchiridion_of_Epictetus"
+		}
 	},
 	{
 		"text": "Waste no more time arguing what a good man should be. Be one.",
