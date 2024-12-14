@@ -12,13 +12,6 @@ interface NavLinksProps {
 const NavLinks = ({ id, max }: NavLinksProps) => {
   const router = useRouter();
 
-  const prevIndex = id - 1;
-  const nextIndex = id + 1;
-  const hasPrev = prevIndex >= 0;
-  const hasNext = nextIndex < max;
-  const prev = `/quotes/${prevIndex}`;
-  const next = `/quotes/${nextIndex}`;
-
   useEffect(() => {
     const handleKeydown = (event: KeyboardEvent) => {
       if (event.key === "ArrowLeft" && hasPrev) {
@@ -31,6 +24,13 @@ const NavLinks = ({ id, max }: NavLinksProps) => {
     document.addEventListener("keydown", handleKeydown);
     return () => document.removeEventListener("keydown", handleKeydown);
   });
+
+  const prevIndex = id - 1;
+  const nextIndex = id + 1;
+  const hasPrev = prevIndex >= 0;
+  const hasNext = nextIndex < max;
+  const prev = `/quotes/${prevIndex}`;
+  const next = `/quotes/${nextIndex}`;
 
   return (
     <nav>
