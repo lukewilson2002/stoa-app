@@ -1,10 +1,12 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import Breadcrumb from "@/components/Breadcrumb";
 import "./globals.scss";
 
 export const metadata: Metadata = {
-  title: "Stoa",
-  description: "A collection of stoic quotes",
+  title: {
+    template: "%s | Stoa",
+    default: "Stoa",
+  },
 };
 
 export default function RootLayout({
