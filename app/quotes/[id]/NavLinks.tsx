@@ -30,7 +30,7 @@ const NavLinks = ({ id, max }: NavLinksProps) => {
 
     document.addEventListener("keydown", handleKeydown);
     return () => document.removeEventListener("keydown", handleKeydown);
-  }, []);
+  });
 
   return (
     <nav>

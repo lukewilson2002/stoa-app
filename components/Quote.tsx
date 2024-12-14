@@ -1,11 +1,11 @@
 import { IQuote } from "@/lib/quotes";
 
-interface QuoteProps {
+interface IQuoteProps {
   quote: IQuote;
   className?: string;
 }
 
-const Quote = ({ quote, className }: QuoteProps) => {
+const Quote = ({ quote, className }: IQuoteProps) => {
   if (!quote) return null;
   return (
     <blockquote className={className}>
