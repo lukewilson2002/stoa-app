@@ -1,4 +1,4 @@
-const PageLayout = ({ children }: any) => (
+const PageLayout = ({ children }: { children: any }) => (
   <main className="mx-auto max-w-3xl p-4">
     {children}
   </main>

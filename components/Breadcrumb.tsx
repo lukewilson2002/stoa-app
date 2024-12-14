@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Breadcrumb() {
@@ -11,8 +12,8 @@ export default function Breadcrumb() {
         const href = "/" + pathSegments.slice(1, index + 1).join("/");
         return (
           <span key={index}>
-            {index === 0 ? <a href="/">home</a> :
-              <>{" / "}<a href={href}>{segment}</a></>
+            {index === 0 ? <Link href="/">home</Link> :
+              <>{" / "}<Link href={href}>{segment}</Link></>
             }
           </span>
         );
