@@ -7,7 +7,7 @@ export default function Breadcrumb() {
 	const pathSegments = ["/", ...usePathname().split("/").filter((segment) => segment)];
 
   return (
-    <span>
+    <nav aria-label="breadcrumb">
       {pathSegments.map((segment, index) => {
         const href = "/" + pathSegments.slice(1, index + 1).join("/");
         return (
@@ -18,6 +18,6 @@ export default function Breadcrumb() {
           </span>
         );
       })}
-    </span>
+    </nav>
   );
 }
