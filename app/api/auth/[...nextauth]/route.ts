@@ -1,5 +1,4 @@
-import { handlers } from "@/lib/auth";
-export const { GET, POST } = handlers;
+export { GET, POST } from "@/lib/auth";
 
 // Checks session expiry and refreshes if necessary
 export { auth as middleware } from "@/lib/auth";
